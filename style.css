@@ -1,0 +1,379 @@
+/* reset CSS */
+/* reset CSS */
+/* reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* reset CSS end*/
+/* reset CSS end*/
+/* reset CSS end*/
+:root {
+  --snow-man-white: #EEEEEE;
+  --snow-man-eye-white: #FFFFFF;
+  --snow-man-eye-black: #000000;
+  --snow-man-hand: #DDA0DD;
+  --background-black: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-black);
+}
+
+/* snowman*/
+.container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: 100%;
+}
+
+/* snowman head */
+.head-wrapper {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: var(--snow-man-white);
+}
+
+.eyes-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 40%;
+  width: 100%;
+  height: 20%;
+}
+
+.eye-wrapper {
+  position: relative;
+  width: 30%;
+  height: 150%;
+  margin: 0 2%;
+  border-radius: 50%;
+  background-color: var(--snow-man-eye-black);
+}
+
+/* 水汪汪眼 */
+.eye-ball-wrapper {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: var(--snow-man-eye-white);
+}
+
+.eye-ball-wrapper:after {
+  position: relative;
+  content: '';
+  display: block;
+  top: 95%;
+  left: 85%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: var(--snow-man-eye-white);
+}
+
+/* 長條眼 */
+/* .eye-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  margin: 0 2%;
+  border-radius: 30% 30% 30% 30%;
+  border: 0.15rem solid black;
+  background-color: #FFFFFF;
+}
+
+.eye-ball-wrapper {
+  width: 80%;
+  height: 40%;
+  background-color: black;
+} */
+
+
+/* snowman body */
+/* 頭大身小 */
+.body-wrapper {
+  position: relative;
+  top: -5%;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  background-color: var(--snow-man-white);
+}
+
+.body-wrapper::after {
+  position: relative;
+  top: 85%;
+  left: 50%;
+  display: block;
+  content: '';
+  width: 71.414%;
+  height: calc(15% + 1px);
+  transform: translateX(-50%);
+  border-radius: 0 0 100% 100%;
+  background-color: var(--background-black);
+}
+
+/* 正常身形 */
+/* .body-wrapper {
+  position: relative;
+  top: -5%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: var(--snow-man-white);
+}
+
+.body-wrapper::after {
+  position: relative;
+  top: 85%;
+  left: 50%;
+  display: block;
+  content: '';
+  width: 71.414%;
+  height: calc(15% + 1px);
+  transform: translateX(-50%);
+  border-radius: 0 0 100% 100%;
+  background-color: red;
+} */
+
+/* 圍巾 */
+/* .scarf-wrapper {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 90%;
+  height: 20%;
+  border-radius: 25%;
+  transform: translateX(-50%);
+  background-color: aqua;
+} */
+
+/* 圍巾 img */
+.scarf-img-wrapper {
+  position: absolute;
+  top: -10%;
+  left: 13%;
+  width: 75%;
+  height: 75%;
+  transform: translateX(-75%);
+  transform: scaleX(167%);
+}
+
+.scarf-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hand-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.arm {
+  position: absolute;
+  top: 8%;
+  left: -3%;
+  display: block;
+  content: '';
+  width: 45%;
+  height: 15%;
+  border-radius: 50%;
+  background-color: var(--snow-man-white);
+  transform: rotate(-30deg);
+  transform-origin: 0 50%;
+}
+
+/* arm-wave 動畫 */
+.arm-wave {
+  animation-duration: 0.7s;
+  animation-name: arm-wave;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+}
+
+@keyframes arm-wave {
+  0% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform-origin: 0 50%;
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  display: block;
+  content: '';
+  width: 75%;
+  height: 225%;
+  border-radius: 50%;
+  background-color: var(--snow-man-hand);
+  transform: translateY(-50%);
+}
