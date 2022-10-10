@@ -28,3 +28,37 @@ $('.wrapper').on('animationend', function () {
 $('.arm').on('animationend', function () {
   $(this).removeClass('arm-wave')
 })
+
+// timeline
+// add to timeline
+$('.add-timeline').on('click', function () {
+  // 使用 attr('class') 找出 className，組合成<span>再 append 到 timeline
+  $('.timeline-container').append(`<span>${$(this).attr('class')}</span>`)
+  return
+})
+
+// show timeline items
+let items = []
+let i = 0
+$('.show-timeline').on('click', function () {
+  // 把 <span> 夾帶的 className 找出來
+  items = $('.timeline-container').html().trim().replace(/<span>/g, '').split('</span>')
+
+  // trigger 其中第一個動畫
+  i = triggerAnimation(i, items)
+})
+// 動畫結束時，如果 items 有東西，則 trigger 下一個動畫
+$('body').on('animationend', function () {
+  if (i < items.length - 1) {
+    i = triggerAnimation(i, items)
+  } else {
+    i = 0
+    items = []
+  }
+})
+function triggerAnimation(i, items) {
+  let event = new CustomEvent('click')
+  let className = items[i].split(' ')[0]
+  document.querySelector(`.${className}`).dispatchEvent(event)
+  return i = i + 1
+}
