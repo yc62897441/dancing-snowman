@@ -34,7 +34,8 @@ $('.arm').on('animationend', function () {
 $('.add-timeline').on('contextmenu', function (event) {
   // 使用 attr('class') 找出 className，組合成<span>再 append 到 timeline
   event.preventDefault()
-  $('.timeline-container').append(`<span>${$(this).attr('class')}</span>`)
+
+  $('.timeline-container').append(`<span>${$(this).attr('class').split(' ')[1].replace('control-btn-', '')}</span>`)
   return
 })
 
@@ -59,7 +60,7 @@ $('body').on('animationend', function () {
 })
 function triggerAnimation(i, items) {
   let event = new CustomEvent('click')
-  let className = items[i].split(' ')[1]
-  document.querySelector(`.${className}`).dispatchEvent(event)
+  let className = `.control-btn-${items[i]}`
+  document.querySelector(`${className}`).dispatchEvent(event)
   return i = i + 1
 }
