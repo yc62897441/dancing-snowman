@@ -52,7 +52,10 @@ $('.run-timeline').on('click', function () {
 // 動畫結束時，如果 items 有東西，則 trigger 下一個動畫
 $('body').on('animationend', function () {
   if (i < items.length - 1) {
-    i = triggerAnimation(i, items)
+    // 避免連續兩個相同的動畫，不會跑
+    setTimeout(() => {
+      i = triggerAnimation(i, items)
+    }, 1)
   } else {
     i = 0
     items = []
