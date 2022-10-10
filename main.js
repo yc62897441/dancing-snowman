@@ -31,8 +31,9 @@ $('.arm').on('animationend', function () {
 
 // timeline
 // add to timeline
-$('.add-timeline').on('click', function () {
+$('.add-timeline').on('contextmenu', function (event) {
   // 使用 attr('class') 找出 className，組合成<span>再 append 到 timeline
+  event.preventDefault()
   $('.timeline-container').append(`<span>${$(this).attr('class')}</span>`)
   return
 })
