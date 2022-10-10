@@ -41,7 +41,7 @@ $('.add-timeline').on('contextmenu', function (event) {
 // show timeline items
 let items = []
 let i = 0
-$('.show-timeline').on('click', function () {
+$('.run-timeline').on('click', function () {
   // 把 <span> 夾帶的 className 找出來
   items = $('.timeline-container').html().trim().replace(/<span>/g, '').split('</span>')
 
@@ -59,7 +59,7 @@ $('body').on('animationend', function () {
 })
 function triggerAnimation(i, items) {
   let event = new CustomEvent('click')
-  let className = items[i].split(' ')[0]
+  let className = items[i].split(' ')[1]
   document.querySelector(`.${className}`).dispatchEvent(event)
   return i = i + 1
 }
