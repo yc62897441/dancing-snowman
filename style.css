@@ -377,3 +377,46 @@ body {
   background-color: var(--snow-man-hand);
   transform: translateY(-50%);
 }
+
+/* control bar */
+.control-btn {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: tan;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+.run-btn {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: seagreen;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* timeline */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 200px;
+  padding: 15px 15%;
+  background-color: tan;
+}
+
+.timeline-container span {
+  height: 2.5rem;
+  padding: 3px 15px;
+  margin: 2px 3px;
+  border-radius: 5px;
+  background-color: saddlebrown;
+  color: #FFFFFF;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
