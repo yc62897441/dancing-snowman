@@ -92,20 +92,26 @@ $('.run-timeline').on('click', function () {
   i = triggerAnimation(i, items)
 })
 // 動畫結束時，如果 items 有東西，則 trigger 下一個動畫
+// 如果一個動畫是由多個動畫配合而成，則會觸發多個 animationend 事件。為了避免因為這樣造成一次觸發多個 triggerAnimation，所以加上 multipleAnimationend 做為檢測機制的變數。
+let multipleAnimationend = false
 $('body').on('animationend', function () {
-  if (i < items.length - 1) {
-    // 避免連續兩個相同的動畫，不會跑
-    setTimeout(() => {
-      i = triggerAnimation(i, items)
-    }, 1)
-  } else {
-    i = 0
-    items = []
+  if (!multipleAnimationend) {
+    if (i < items.length - 1) {
+      // 避免連續兩個相同的動畫，不會跑
+      setTimeout(() => {
+        i = triggerAnimation(i, items)
+      }, 1)
+    } else {
+      i = 0
+      items = []
+    }
   }
+  multipleAnimationend = true
 })
 function triggerAnimation(i, items) {
   let event = new CustomEvent('click')
   let className = items[i]
   document.querySelector(`.${className}`).dispatchEvent(event)
+  multipleAnimationend = false
   return i = i + 1
 }
