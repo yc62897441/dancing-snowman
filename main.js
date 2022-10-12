@@ -24,6 +24,13 @@ function setEventListener() {
   $('.control-btn-eyes-sparkle').on('click', function () {
     $('.eye-ball-wrapper').addClass('eyes-sparkle')
   })
+
+  $('.control-btn-two-steps ').on('click', function () {
+    $('.right-foot').addClass('two-steps-right-foot')
+    $('.left-foot').addClass('two-steps-left-foot')
+    $('.head-wrapper').addClass('two-steps')
+    $('.body-wrapper').addClass('two-steps')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -37,6 +44,12 @@ $('.arm').on('animationend', function () {
 })
 $('.eye-ball-wrapper').on('animationend', function () {
   $(this).removeClass('eyes-sparkle')
+})
+$('.foot-wrapper').on('animationend', function () {
+  $('.right-foot').removeClass('two-steps-right-foot')
+  $('.left-foot').removeClass('two-steps-left-foot')
+  $('.head-wrapper').removeClass('two-steps')
+  $('.body-wrapper').removeClass('two-steps')
 })
 
 // timeline

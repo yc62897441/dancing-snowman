@@ -227,9 +227,11 @@ body {
   animation-iteration-count: 3;
   animation-direction: normal;
 }
+
 .eyes-sparkle:after {
   background-color: var(--snow-man-white);
 }
+
 @keyframes eyes-sparkle {
   0% {
     width: 50%;
@@ -444,6 +446,127 @@ body {
   transform: translateY(-50%);
 }
 
+/* snowman feet */
+.feet-wrapper {
+  position: relative;
+  top: -10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 5%;
+  /* background-color: aqua; */
+  z-index: 11;
+}
+
+.foot-wrapper {
+  width: 13%;
+  height: 100%;
+  margin: 0 -1%;
+  border: 2px solid var(--background-black);
+  border-radius: 45%;
+  background-color: var(--snow-man-white);
+}
+
+/* two-steps 動畫 */
+.two-steps {
+  animation-duration: 1s;
+  animation-name: two-steps;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+@keyframes two-steps {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(10%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+.two-steps-left-foot {
+  animation-duration: 1s;
+  animation-name: two-steps-left-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+@keyframes two-steps-left-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-35%);
+  }
+
+  85% {
+    transform: translateX(-35%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+.two-steps-right-foot {
+  animation-duration: 1s;
+  animation-name: two-steps-right-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+@keyframes two-steps-right-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(35%);
+  }
+
+  35% {
+    transform: translateX(35%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  65% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* control bar */
 .control-btn {
   padding: 5px;
@@ -453,7 +576,6 @@ body {
   font-weight: 400;
   cursor: pointer;
 }
-
 
 .run-btn {
   padding: 5px;
