@@ -35,9 +35,21 @@ $('.add-timeline').on('contextmenu', function (event) {
   // 使用 attr('class') 找出 className，組合成<span>再 append 到 timeline
   event.preventDefault()
 
-  $('.timeline-container').append(`<span>${$(this).attr('class').split(' ')[1].replace('control-btn-', '')}</span>`)
+  $('.timeline-container').append(`<span class="timeline-item">${$(this).attr('class').split(' ')[1].replace('control-btn-', '')}</span>`)
+
+  // 重新安置刪除事件的監聽器到上行新增的元素上。如果沒有重新call一次函數，則點擊 timeline-item 元素時無法觸發刪除
+  removeTimelineItem()
   return
 })
+
+// remove from timeline
+function removeTimelineItem() {
+  $('.timeline-item').on('contextmenu', function (event) {
+    event.preventDefault()
+    $(this).remove()
+  })
+}
+removeTimelineItem()
 
 // show timeline items
 let items = []
