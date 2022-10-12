@@ -20,6 +20,10 @@ function setEventListener() {
   $('.control-btn-arm-wave').on('click', function () {
     $('.arm').addClass('arm-wave')
   })
+
+  $('.control-btn-eyes-sparkle').on('click', function () {
+    $('.eye-ball-wrapper').addClass('eyes-sparkle')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -30,6 +34,9 @@ $('.wrapper').on('animationend', function () {
 })
 $('.arm').on('animationend', function () {
   $(this).removeClass('arm-wave')
+})
+$('.eye-ball-wrapper').on('animationend', function () {
+  $(this).removeClass('eyes-sparkle')
 })
 
 // timeline

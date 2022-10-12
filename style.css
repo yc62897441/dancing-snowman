@@ -220,6 +220,72 @@ body {
   background-color: var(--snow-man-eye-white);
 }
 
+/* eyes-sparkle 動畫 */
+.eyes-sparkle {
+  animation-duration: 0.25s;
+  animation-name: eyes-sparkle;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+}
+.eyes-sparkle:after {
+  background-color: var(--snow-man-white);
+}
+@keyframes eyes-sparkle {
+  0% {
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    width: 80%;
+    height: 80%;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0deg);
+  }
+}
+
+/* .arm-wave {
+  animation-duration: 0.7s;
+  animation-name: arm-wave;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+}
+
+@keyframes arm-wave {
+  0% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform-origin: 0 50%;
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+} */
+
+
 /* 長條眼 */
 /* .eye-wrapper {
   display: flex;
