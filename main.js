@@ -26,6 +26,7 @@ function setEventListener() {
   })
 
   $('.control-btn-two-steps ').on('click', function () {
+    $('.feet-wrapper').addClass('two-steps-feet-wrapper')
     $('.right-foot').addClass('two-steps-right-foot')
     $('.left-foot').addClass('two-steps-left-foot')
     $('.head-wrapper').addClass('two-steps')
@@ -46,6 +47,7 @@ $('.eye-ball-wrapper').on('animationend', function () {
   $(this).removeClass('eyes-sparkle')
 })
 $('.foot-wrapper').on('animationend', function () {
+  $('.feet-wrapper').removeClass('two-steps-feet-wrapper')
   $('.right-foot').removeClass('two-steps-right-foot')
   $('.left-foot').removeClass('two-steps-left-foot')
   $('.head-wrapper').removeClass('two-steps')
