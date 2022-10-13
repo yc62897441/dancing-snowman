@@ -20,6 +20,23 @@ function setEventListener() {
   $('.control-btn-arm-wave').on('click', function () {
     $('.arm').addClass('arm-wave')
   })
+
+  $('.control-btn-eyes-sparkle').on('click', function () {
+    $('.eye-ball-wrapper').addClass('eyes-sparkle')
+  })
+
+  $('.control-btn-two-steps ').on('click', function () {
+    $('.feet-wrapper').addClass('two-steps-feet-wrapper')
+    $('.right-foot').addClass('two-steps-right-foot')
+    $('.left-foot').addClass('two-steps-left-foot')
+    $('.head-wrapper').addClass('two-steps')
+    $('.body-wrapper').addClass('two-steps')
+  })
+
+  $('.control-btn-push-up').on('click', function () {
+    $('.wrapper').addClass('push-up')
+    $('.hand-wrapper').addClass('push-up-hand-wrapper')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -30,6 +47,20 @@ $('.wrapper').on('animationend', function () {
 })
 $('.arm').on('animationend', function () {
   $(this).removeClass('arm-wave')
+})
+$('.eye-ball-wrapper').on('animationend', function () {
+  $(this).removeClass('eyes-sparkle')
+})
+$('.foot-wrapper').on('animationend', function () {
+  $('.feet-wrapper').removeClass('two-steps-feet-wrapper')
+  $('.right-foot').removeClass('two-steps-right-foot')
+  $('.left-foot').removeClass('two-steps-left-foot')
+  $('.head-wrapper').removeClass('two-steps')
+  $('.body-wrapper').removeClass('two-steps')
+})
+$('.wrapper').on('animationend', function () {
+  $('.wrapper').removeClass('push-up')
+  $('.hand-wrapper').removeClass('push-up-hand-wrapper')
 })
 
 // timeline
@@ -72,20 +103,26 @@ $('.run-timeline').on('click', function () {
   i = triggerAnimation(i, items)
 })
 // 動畫結束時，如果 items 有東西，則 trigger 下一個動畫
+// 如果一個動畫是由多個動畫配合而成，則會觸發多個 animationend 事件。為了避免因為這樣造成一次觸發多個 triggerAnimation，所以加上 multipleAnimationend 做為檢測機制的變數。
+let multipleAnimationend = false
 $('body').on('animationend', function () {
-  if (i < items.length - 1) {
-    // 避免連續兩個相同的動畫，不會跑
-    setTimeout(() => {
-      i = triggerAnimation(i, items)
-    }, 1)
-  } else {
-    i = 0
-    items = []
+  if (!multipleAnimationend) {
+    if (i < items.length - 1) {
+      // 避免連續兩個相同的動畫，不會跑
+      setTimeout(() => {
+        i = triggerAnimation(i, items)
+      }, 1)
+    } else {
+      i = 0
+      items = []
+    }
   }
+  multipleAnimationend = true
 })
 function triggerAnimation(i, items) {
   let event = new CustomEvent('click')
   let className = items[i]
   document.querySelector(`.${className}`).dispatchEvent(event)
+  multipleAnimationend = false
   return i = i + 1
 }
