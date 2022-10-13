@@ -341,6 +341,31 @@ body {
   }
 }
 
+.mouth-wrapper {
+  position: relative;
+  top: 53%;
+  left: 50%;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: darkred;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  visibility: hidden;
+}
+
+.tongue {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  width: 60%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: firebrick;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
 /* snowman body */
 /* 頭大身小 */
 .body-wrapper {
@@ -572,6 +597,103 @@ body {
 
   100% {
     transform: translateX(0%);
+  }
+}
+
+/* waooo 動畫 */
+.head-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: head-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes head-wrapper-waooo {
+  0% {
+    height: 30%
+  }
+
+  25% {
+    height: 20%
+  }
+
+  50% {
+    height: 35%
+  }
+}
+
+.body-wrapper {
+  position: relative;
+  top: -5%;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  background-color: var(--snow-man-white);
+}
+
+.body-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: body-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes body-wrapper-waooo {
+  0% {
+    height: 22%
+  }
+
+  25% {
+    height: 5%
+  }
+
+  50% {
+    height: 24%
+  }
+}
+
+.mouth-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: mouth-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes mouth-wrapper-waooo {
+  0% {
+    visibility: hidden;
+
+  }
+
+  24% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: visible;
+    width: 10%;
+    height: 10%;
+  }
+
+  40% {
+    z-index: -1;
+  }
+
+  50% {
+    visibility: visible;
+    width: 45%;
+    height: 30%;
+    z-index: 999;
+  }
+
+  90% {
+    width: 1%;
+    height: 1%;
+    visibility: hidden;
+    z-index: 999;
   }
 }
 

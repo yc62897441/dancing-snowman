@@ -37,6 +37,12 @@ function setEventListener() {
     $('.wrapper').addClass('push-up')
     $('.hand-wrapper').addClass('push-up-hand-wrapper')
   })
+
+  $('.control-btn-waooo').on('click', function () {
+    $('.head-wrapper').addClass('head-wrapper-waooo')
+    $('.mouth-wrapper').addClass('mouth-wrapper-waooo')
+    $('.body-wrapper').addClass('body-wrapper-waooo')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -61,6 +67,11 @@ $('.foot-wrapper').on('animationend', function () {
 $('.wrapper').on('animationend', function () {
   $('.wrapper').removeClass('push-up')
   $('.hand-wrapper').removeClass('push-up-hand-wrapper')
+})
+$('.head-wrapper').on('animationend', function () {
+  $('.head-wrapper').removeClass('head-wrapper-waooo')
+  $('.mouth-wrapper').removeClass('mouth-wrapper-waooo')
+  $('.body-wrapper').removeClass('body-wrapper-waooo')
 })
 
 // timeline
