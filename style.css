@@ -157,8 +157,8 @@ body {
 
 /* snowman*/
 .container {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   border: 1px solid black;
 }
 
@@ -601,10 +601,10 @@ body {
   flex-wrap: wrap;
   width: 100%;
   min-height: 200px;
-  padding: 15px 15%;
+  padding: 10px 15px;
   background-color: tan;
-  border-top: 5px solid #111111;
-  border-bottom: 5px solid #111111;
+  border-top: 3px solid #111111;
+  border-bottom: 3px solid #111111;
 }
 
 .timeline-container span {
@@ -622,13 +622,19 @@ body {
 /* usage directions */
 .usage-directions-wrapper {
   color: var(--font-color);
-  line-height: 2rem;
-  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .usage-directions-wrapper h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+.usage-directions-wrapper button {
+  font-size: 0.8rem;
+  padding: 2px 3px;
+  line-height: 1rem;
 }
 
 .timeline-btn {
@@ -647,4 +653,57 @@ footer {
 
 footer a {
   color: var(--font-color);
+}
+
+/* RWD */
+@media (min-width: 375px) {
+  .container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .usage-directions-wrapper {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .usage-directions-wrapper h4 {
+    font-size: 1.2rem;
+  }
+
+  .usage-directions-wrapper button {
+    font-size: 1rem;
+    padding: 5px;
+    line-height: 1.2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 500px;
+    height: 500px;
+  }
+
+  .timeline-container {
+    padding: 15px 15%;
+    border-top: 5px solid #111111;
+    border-bottom: 5px solid #111111;
+  }
+
+  .usage-directions-wrapper {
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .usage-directions-wrapper h4 {
+    font-size: 1.5rem;
+  }
+
+  .usage-directions-wrapper button {
+    font-size: 1.2rem;
+    padding: 5px;
+    line-height: 1.5rem;
+  }
 }
