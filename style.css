@@ -171,6 +171,80 @@ body {
   height: 100%;
 }
 
+/* push-up 動畫 */
+.push-up {
+  animation-duration: 3s;
+  animation-name: push-up;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes push-up {
+  0% {
+    transform: rotate(0deg) translateX(0%);
+  }
+
+  20% {
+    transform: rotate(90deg) translateY(-20%) translateX(0%);
+  }
+
+  40% {
+    transform: rotate(90deg) translateY(-15%) translateX(-10%);
+  }
+
+  60% {
+    transform: rotate(90deg) translateY(-10%) translateX(0%);
+  }
+
+  80% {
+    transform: rotate(90deg) translateY(-5%) translateX(-10%);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0%);
+  }
+}
+.push-up-hand-wrapper {
+  animation-duration: 3s;
+  animation-name: push-up-hand-wrapper;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes push-up-hand-wrapper {
+  0% {
+    transform: scale(1, 1);
+    transform-origin: 0 50%;
+  }
+
+  10% {
+    transform: scale(1, 1);
+  }
+
+  15% {
+    transform: scale(0.5, 1);
+  }
+
+  20% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  55% {
+    transform: scale(0.5, 1);
+  }
+
+  60% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+    transform-origin: 0 50%;
+  }
+}
+
 /* snowman head */
 .head-wrapper {
   width: 30%;
@@ -263,51 +337,6 @@ body {
   }
 }
 
-/* .arm-wave {
-  animation-duration: 0.7s;
-  animation-name: arm-wave;
-  animation-iteration-count: 3;
-  animation-direction: normal;
-}
-
-@keyframes arm-wave {
-  0% {
-    transform-origin: 0 50%;
-    transform: rotate(-30deg);
-  }
-
-  50% {
-    transform-origin: 0 50%;
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform-origin: 0 50%;
-    transform: rotate(-30deg);
-  }
-} */
-
-
-/* 長條眼 */
-/* .eye-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  height: 100%;
-  margin: 0 2%;
-  border-radius: 30% 30% 30% 30%;
-  border: 0.15rem solid black;
-  background-color: #FFFFFF;
-}
-
-.eye-ball-wrapper {
-  width: 80%;
-  height: 40%;
-  background-color: black;
-} */
-
-
 /* snowman body */
 /* 頭大身小 */
 .body-wrapper {
@@ -331,41 +360,6 @@ body {
   border-radius: 0 0 100% 100%;
   background-color: var(--background-black);
 }
-
-/* 正常身形 */
-/* .body-wrapper {
-  position: relative;
-  top: -5%;
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
-  background-color: var(--snow-man-white);
-}
-
-.body-wrapper::after {
-  position: relative;
-  top: 85%;
-  left: 50%;
-  display: block;
-  content: '';
-  width: 71.414%;
-  height: calc(15% + 1px);
-  transform: translateX(-50%);
-  border-radius: 0 0 100% 100%;
-  background-color: red;
-} */
-
-/* 圍巾 */
-/* .scarf-wrapper {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  width: 90%;
-  height: 20%;
-  border-radius: 25%;
-  transform: translateX(-50%);
-  background-color: aqua;
-} */
 
 /* 圍巾 img */
 .scarf-img-wrapper {
@@ -475,6 +469,7 @@ body {
   animation-iteration-count: 1;
   animation-direction: 1;
 }
+
 @keyframes two-steps {
   0% {
     transform: translateX(0%);
@@ -496,16 +491,19 @@ body {
     transform: translateX(0%);
   }
 }
+
 .two-steps-feet-wrapper {
   display: flex;
   visibility: visible;
 }
+
 .two-steps-left-foot {
   animation-duration: 1s;
   animation-name: two-steps-left-foot;
   animation-iteration-count: 1;
   animation-direction: 1;
 }
+
 @keyframes two-steps-left-foot {
   0% {
     transform: translateX(0%);
@@ -535,12 +533,14 @@ body {
     transform: translateX(0%);
   }
 }
+
 .two-steps-right-foot {
   animation-duration: 1s;
   animation-name: two-steps-right-foot;
   animation-iteration-count: 1;
   animation-direction: 1;
 }
+
 @keyframes two-steps-right-foot {
   0% {
     transform: translateX(0%);

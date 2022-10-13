@@ -32,6 +32,11 @@ function setEventListener() {
     $('.head-wrapper').addClass('two-steps')
     $('.body-wrapper').addClass('two-steps')
   })
+
+  $('.control-btn-push-up').on('click', function () {
+    $('.wrapper').addClass('push-up')
+    $('.hand-wrapper').addClass('push-up-hand-wrapper')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -52,6 +57,10 @@ $('.foot-wrapper').on('animationend', function () {
   $('.left-foot').removeClass('two-steps-left-foot')
   $('.head-wrapper').removeClass('two-steps')
   $('.body-wrapper').removeClass('two-steps')
+})
+$('.wrapper').on('animationend', function () {
+  $('.wrapper').removeClass('push-up')
+  $('.hand-wrapper').removeClass('push-up-hand-wrapper')
 })
 
 // timeline
