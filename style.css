@@ -141,6 +141,7 @@ table {
   --snow-man-eye-black: #000000;
   --snow-man-hand: #DDA0DD;
   --background-black: #222222;
+  --font-color: #EEEEEE;
 }
 
 * {
@@ -178,6 +179,7 @@ body {
   animation-iteration-count: 1;
   animation-direction: normal;
 }
+
 @keyframes push-up {
   0% {
     transform: rotate(0deg) translateX(0%);
@@ -203,12 +205,14 @@ body {
     transform: rotate(0deg) translateX(0%);
   }
 }
+
 .push-up-hand-wrapper {
   animation-duration: 3s;
   animation-name: push-up-hand-wrapper;
   animation-iteration-count: 1;
   animation-direction: normal;
 }
+
 @keyframes push-up-hand-wrapper {
   0% {
     transform: scale(1, 1);
@@ -599,6 +603,8 @@ body {
   min-height: 200px;
   padding: 15px 15%;
   background-color: tan;
+  border-top: 5px solid #111111;
+  border-bottom: 5px solid #111111;
 }
 
 .timeline-container span {
@@ -607,8 +613,38 @@ body {
   margin: 2px 3px;
   border-radius: 5px;
   background-color: saddlebrown;
-  color: #FFFFFF;
+  color: var(--font-color);
   line-height: 2rem;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+/* usage directions */
+.usage-directions-wrapper {
+  color: var(--font-color);
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.usage-directions-wrapper h4 {
+  font-size: 1.5rem;
+}
+
+.timeline-btn {
+  background-color: saddlebrown;
+  padding: 5px;
+  color: var(--font-color);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--font-color);
+}
+
+footer a {
+  color: var(--font-color);
 }
