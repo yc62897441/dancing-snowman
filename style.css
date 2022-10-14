@@ -896,3 +896,186 @@ footer a {
     transform: translateX(0%);
   }
 }
+
+.wiggling-head {
+  animation-duration: 1.5s;
+  animation-name: wiggling-head;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes wiggling-head {
+  0% {
+    transform: translateX(0%);
+  }
+
+  20% {
+    transform: translateX(20%);
+  }
+
+  25% {
+    transform: translateX(20%);
+  }
+
+  65% {
+    transform: translateX(-20%);
+  }
+
+  70% {
+    transform: translateX(-20%);
+  }
+
+  90% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.wiggling-body {
+  animation-duration: 1.5s;
+  animation-name: wiggling-body;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes wiggling-body {
+  5% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(20%);
+  }
+
+  30% {
+    transform: translateX(20%);
+  }
+
+  70% {
+    transform: translateX(-20%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  95% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.wiggling-feet {
+  display: flex;
+  visibility: visible;
+  /* animation-duration: 1.5s;
+  animation-name: wiggling-feet;
+  animation-iteration-count: 1;
+  animation-direction: 1; */
+}
+
+@keyframes wiggling-feet {
+  0% {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(0%);
+  }
+
+  30% {
+    transform: translateX(5%);
+  }
+
+  35% {
+    transform: translateX(5%);
+  }
+
+  75% {
+    transform: translateX(-5%);
+  }
+
+  80% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.wiggling-right-foot {
+  animation-duration: 1.5s;
+  animation-name: wiggling-right-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes wiggling-right-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  5% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(20%);
+  }
+
+  35% {
+    transform: translateX(20%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  95% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.wiggling-left-foot {
+  animation-duration: 1.5s;
+  animation-name: wiggling-left-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes wiggling-left-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(0%);
+  }
+
+  30% {
+    transform: translateX(20%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  80% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

@@ -47,6 +47,14 @@ function setEventListener() {
   $('.control-btn-head-isolation').on('click', function () {
     $('.head-wrapper').addClass('head-isolation')
   })
+
+  $('.control-btn-wiggling').on('click', function () {
+    $('.head-wrapper').addClass('wiggling-head')
+    $('.body-wrapper').addClass('wiggling-body')
+    $('.feet-wrapper').addClass('wiggling-feet')
+    $('.right-foot').addClass('wiggling-right-foot')
+    $('.left-foot').addClass('wiggling-left-foot')
+  })
 }
 
 // 設置動畫結束的事件監聽器
@@ -79,6 +87,13 @@ $('.head-wrapper').on('animationend', function () {
 })
 $('.head-wrapper').on('animationend', function () {
   $('.head-wrapper').removeClass('head-isolation')
+})
+$('.head-wrapper').on('animationend', function () {
+  $('.head-wrapper').removeClass('wiggling-head')
+  $('.body-wrapper').removeClass('wiggling-body')
+  $('.feet-wrapper').removeClass('wiggling-feet')
+  $('.right-foot').removeClass('wiggling-right-foot')
+  $('.left-foot').removeClass('wiggling-left-foot')
 })
 
 // timeline
