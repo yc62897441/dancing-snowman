@@ -172,83 +172,6 @@ body {
   height: 100%;
 }
 
-/* push-up 動畫 */
-.push-up {
-  animation-duration: 3s;
-  animation-name: push-up;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-
-@keyframes push-up {
-  0% {
-    transform: rotate(0deg) translateX(0%);
-  }
-
-  20% {
-    transform: rotate(90deg) translateY(-20%) translateX(0%);
-  }
-
-  40% {
-    transform: rotate(90deg) translateY(-15%) translateX(-10%);
-  }
-
-  60% {
-    transform: rotate(90deg) translateY(-10%) translateX(0%);
-  }
-
-  80% {
-    transform: rotate(90deg) translateY(-5%) translateX(-10%);
-  }
-
-  100% {
-    transform: rotate(0deg) translateX(0%);
-  }
-}
-
-.push-up-hand-wrapper {
-  animation-duration: 3s;
-  animation-name: push-up-hand-wrapper;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-
-@keyframes push-up-hand-wrapper {
-  0% {
-    transform: scale(1, 1);
-    transform-origin: 0 50%;
-  }
-
-  10% {
-    transform: scale(1, 1);
-  }
-
-  15% {
-    transform: scale(0.5, 1);
-  }
-
-  20% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1, 1);
-  }
-
-  55% {
-    transform: scale(0.5, 1);
-  }
-
-  60% {
-    transform: scale(1, 1);
-  }
-
-  100% {
-    transform: scale(1, 1);
-    transform-origin: 0 50%;
-  }
-}
-
 /* snowman head */
 .head-wrapper {
   width: 30%;
@@ -296,49 +219,6 @@ body {
   height: 40%;
   border-radius: 50%;
   background-color: var(--snow-man-eye-white);
-}
-
-/* eyes-sparkle 動畫 */
-.eyes-sparkle {
-  animation-duration: 0.25s;
-  animation-name: eyes-sparkle;
-  animation-iteration-count: 3;
-  animation-direction: normal;
-}
-
-.eyes-sparkle:after {
-  background-color: var(--snow-man-white);
-}
-
-@keyframes eyes-sparkle {
-  0% {
-    width: 50%;
-    height: 50%;
-    transform-origin: 0 0;
-    transform: rotate(0deg);
-  }
-
-  15% {
-    transform: rotate(-10deg);
-  }
-
-  50% {
-    width: 80%;
-    height: 80%;
-    transform-origin: 0 0;
-    transform: rotate(10deg);
-  }
-
-  85% {
-    transform: rotate(-10deg);
-  }
-
-  100% {
-    width: 50%;
-    height: 50%;
-    transform-origin: 0 0;
-    transform: rotate(0deg);
-  }
 }
 
 .mouth-wrapper {
@@ -431,31 +311,6 @@ body {
   transform-origin: 0 50%;
 }
 
-/* arm-wave 動畫 */
-.arm-wave {
-  animation-duration: 0.7s;
-  animation-name: arm-wave;
-  animation-iteration-count: 3;
-  animation-direction: normal;
-}
-
-@keyframes arm-wave {
-  0% {
-    transform-origin: 0 50%;
-    transform: rotate(-30deg);
-  }
-
-  50% {
-    transform-origin: 0 50%;
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform-origin: 0 50%;
-    transform: rotate(-30deg);
-  }
-}
-
 .hand {
   position: absolute;
   top: 50%;
@@ -489,212 +344,6 @@ body {
   border: 2px solid var(--background-black);
   border-radius: 45%;
   background-color: var(--snow-man-white);
-}
-
-/* two-steps 動畫 */
-.two-steps {
-  animation-duration: 1s;
-  animation-name: two-steps;
-  animation-iteration-count: 1;
-  animation-direction: 1;
-}
-
-@keyframes two-steps {
-  0% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(10%);
-  }
-
-  50% {
-    transform: translateX(0%);
-  }
-
-  75% {
-    transform: translateX(-10%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-.two-steps-feet-wrapper {
-  display: flex;
-  visibility: visible;
-}
-
-.two-steps-left-foot {
-  animation-duration: 1s;
-  animation-name: two-steps-left-foot;
-  animation-iteration-count: 1;
-  animation-direction: 1;
-}
-
-@keyframes two-steps-left-foot {
-  0% {
-    transform: translateX(0%);
-  }
-
-  10% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(20%);
-  }
-
-  50% {
-    transform: translateX(0%);
-  }
-
-  75% {
-    transform: translateX(-35%);
-  }
-
-  85% {
-    transform: translateX(-35%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-.two-steps-right-foot {
-  animation-duration: 1s;
-  animation-name: two-steps-right-foot;
-  animation-iteration-count: 1;
-  animation-direction: 1;
-}
-
-@keyframes two-steps-right-foot {
-  0% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(35%);
-  }
-
-  35% {
-    transform: translateX(35%);
-  }
-
-  50% {
-    transform: translateX(0%);
-  }
-
-  65% {
-    transform: translateX(0%);
-  }
-
-  75% {
-    transform: translateX(-20%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-/* waooo 動畫 */
-.head-wrapper-waooo {
-  animation-duration: 2s;
-  animation-name: head-wrapper-waooo;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
-}
-
-@keyframes head-wrapper-waooo {
-  0% {
-    height: 30%
-  }
-
-  25% {
-    height: 20%
-  }
-
-  50% {
-    height: 35%
-  }
-}
-
-.body-wrapper {
-  position: relative;
-  top: -5%;
-  width: 22%;
-  height: 22%;
-  border-radius: 50%;
-  background-color: var(--snow-man-white);
-}
-
-.body-wrapper-waooo {
-  animation-duration: 2s;
-  animation-name: body-wrapper-waooo;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
-}
-
-@keyframes body-wrapper-waooo {
-  0% {
-    height: 22%
-  }
-
-  25% {
-    height: 5%
-  }
-
-  50% {
-    height: 24%
-  }
-}
-
-.mouth-wrapper-waooo {
-  animation-duration: 2s;
-  animation-name: mouth-wrapper-waooo;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
-}
-
-@keyframes mouth-wrapper-waooo {
-  0% {
-    visibility: hidden;
-
-  }
-
-  24% {
-    visibility: hidden;
-  }
-
-  25% {
-    visibility: visible;
-    width: 10%;
-    height: 10%;
-  }
-
-  40% {
-    z-index: -1;
-  }
-
-  50% {
-    visibility: visible;
-    width: 45%;
-    height: 30%;
-    z-index: 999;
-  }
-
-  90% {
-    width: 1%;
-    height: 1%;
-    visibility: hidden;
-    z-index: 999;
-  }
 }
 
 /* control bar */
@@ -827,5 +476,350 @@ footer a {
     font-size: 1.2rem;
     padding: 5px;
     line-height: 1.5rem;
+  }
+}
+
+/* 動畫 */
+/* 動畫 */
+/* 動畫 */
+/* eyes-sparkle 動畫 */
+.eyes-sparkle {
+  animation-duration: 0.25s;
+  animation-name: eyes-sparkle;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+}
+
+.eyes-sparkle:after {
+  background-color: var(--snow-man-white);
+}
+
+@keyframes eyes-sparkle {
+  0% {
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    width: 80%;
+    height: 80%;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0deg);
+  }
+}
+
+/* waooo 動畫 */
+.head-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: head-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes head-wrapper-waooo {
+  0% {
+    height: 30%
+  }
+
+  25% {
+    height: 20%
+  }
+
+  50% {
+    height: 35%
+  }
+}
+
+.body-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: body-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes body-wrapper-waooo {
+  0% {
+    height: 22%
+  }
+
+  25% {
+    height: 5%
+  }
+
+  50% {
+    height: 24%
+  }
+}
+
+.mouth-wrapper-waooo {
+  animation-duration: 2s;
+  animation-name: mouth-wrapper-waooo;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(1, -0.01, 0, 1.06);
+}
+
+@keyframes mouth-wrapper-waooo {
+  0% {
+    visibility: hidden;
+
+  }
+
+  24% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: visible;
+    width: 10%;
+    height: 10%;
+  }
+
+  40% {
+    z-index: -1;
+  }
+
+  50% {
+    visibility: visible;
+    width: 45%;
+    height: 30%;
+    z-index: 999;
+  }
+
+  90% {
+    width: 1%;
+    height: 1%;
+    visibility: hidden;
+    z-index: 999;
+  }
+}
+
+/* push-up 動畫 */
+.push-up {
+  animation-duration: 3s;
+  animation-name: push-up;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes push-up {
+  0% {
+    transform: rotate(0deg) translateX(0%);
+  }
+
+  20% {
+    transform: rotate(90deg) translateY(-20%) translateX(0%);
+  }
+
+  40% {
+    transform: rotate(90deg) translateY(-15%) translateX(-10%);
+  }
+
+  60% {
+    transform: rotate(90deg) translateY(-10%) translateX(0%);
+  }
+
+  80% {
+    transform: rotate(90deg) translateY(-5%) translateX(-10%);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0%);
+  }
+}
+
+.push-up-hand-wrapper {
+  animation-duration: 3s;
+  animation-name: push-up-hand-wrapper;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes push-up-hand-wrapper {
+  0% {
+    transform: scale(1, 1);
+    transform-origin: 0 50%;
+  }
+
+  10% {
+    transform: scale(1, 1);
+  }
+
+  15% {
+    transform: scale(0.5, 1);
+  }
+
+  20% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  55% {
+    transform: scale(0.5, 1);
+  }
+
+  60% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+    transform-origin: 0 50%;
+  }
+}
+
+/* arm-wave 動畫 */
+.arm-wave {
+  animation-duration: 0.7s;
+  animation-name: arm-wave;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+}
+
+@keyframes arm-wave {
+  0% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform-origin: 0 50%;
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+}
+
+/* two-steps 動畫 */
+.two-steps {
+  animation-duration: 1s;
+  animation-name: two-steps;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes two-steps {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(10%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.two-steps-feet-wrapper {
+  display: flex;
+  visibility: visible;
+}
+
+.two-steps-left-foot {
+  animation-duration: 1s;
+  animation-name: two-steps-left-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes two-steps-left-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-35%);
+  }
+
+  85% {
+    transform: translateX(-35%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.two-steps-right-foot {
+  animation-duration: 1s;
+  animation-name: two-steps-right-foot;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes two-steps-right-foot {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(35%);
+  }
+
+  35% {
+    transform: translateX(35%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  65% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
   }
 }
