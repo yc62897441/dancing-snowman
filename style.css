@@ -823,3 +823,76 @@ footer a {
     transform: translateX(0%);
   }
 }
+
+.head-isolation {
+  animation-duration: 1.5s;
+  animation-name: head-isolation;
+  animation-iteration-count: 1;
+  animation-direction: 1;
+}
+
+@keyframes head-isolation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  7% {
+    transform: translateX(30%);
+  }
+
+  13% {
+    transform: translateX(30%);
+  }
+
+  20% {
+    transform: translateX(0%);
+  }
+
+  26% {
+    transform: translateX(0%);
+  }
+
+  33% {
+    transform: translateX(-15%);
+  }
+
+  39% {
+    transform: translateX(-15%);
+  }
+
+  46% {
+    transform: translateX(0%);
+  }
+
+  54% {
+    transform: translateX(0%);
+  }
+
+  61% {
+    transform: translateX(15%);
+  }
+
+  67% {
+    transform: translateX(15%);
+  }
+
+  74% {
+    transform: translateX(0%);
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  87% {
+    transform: translateX(-30%);
+  }
+
+  93% {
+    transform: translateX(-30%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
