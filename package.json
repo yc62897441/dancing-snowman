@@ -1,0 +1,23 @@
+{
+  "name": "dancing-snowman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yc62897441/dancing-snowman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yc62897441/dancing-snowman/issues"
+  },
+  "homepage": "https://github.com/yc62897441/dancing-snowman#readme",
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}

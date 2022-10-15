@@ -1,3 +1,95 @@
+// The require() function is Node.js specific and is not supported in the browser.
+// 所以改用在 index.html 用 CDN 載入 html2canvas
+
+let runTimeline = false
+const array = []
+let ii = 0
+
+function pushToArray() {
+  setTimeout(() => {
+    if (runTimeline) {
+      ii = ii + 1
+      console.log(runTimeline, i, ii)
+      getCanvasAndPushToArray()
+      pushToArray()
+    }
+  }, 60)
+}
+
+$('.download-gif').on('click', function () {
+})
+
+$('.print-array').on('click', function () {
+  console.log('array', array)
+})
+
+let k = 0
+$('.download-single-image').on('click', function () {
+  console.log('k', k)
+  k = k + 1
+  return Canvas2Image.saveAsPNG(array[k]);
+})
+
+$('.array-to-gif').on('click', async function () {
+  try {
+
+    //呼叫gif物件方法
+    var gif = new window.GIF({
+      workers: 2,
+      quality: 10,
+      // workerScript: 'https://imgss.github.io/demo/gif/gif.worker.js'
+    });
+
+    array.forEach(item => {
+      gif.addFrame(item, { delay: 32 });
+    })
+
+    gif.on('finished', function (blob) {
+
+      window.open(URL.createObjectURL(blob));
+
+      // //下載動作
+      // var el = document.createElement('a');
+      // el.href = URL.createObjectURL(blob);
+      // el.download = 'demo-name'; //設定下載檔名稱
+      // document.body.appendChild(el);
+      // var evt = document.createEvent("MouseEvents");
+      // evt.initEvent("click", false, false);
+      // el.dispatchEvent(evt);
+      // document.body.removeChild(el);
+    })
+    gif.render()
+
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+function getCanvasAndPushToArray() {
+  //要轉換為圖片的dom物件
+  const element = document.querySelector('.container')
+  html2canvas(element)
+    .then(canvas => {
+      console.log('canvas', canvas)
+      array.push(canvas)
+    })
+}
+// function getCanvasAndPushToArray() {
+//   //要轉換為圖片的dom物件
+//   const element = document.querySelector('.container')
+
+//   html2canvas(element, { allowTaint: true })
+//     .then(function (canvas) {
+//       console.log('canvas', canvas)
+//       array.push(canvas)
+//     })
+// }
+
+
+// 新增 end
+// 新增 end
+// 新增 end
+
 $(function () {
   console.log('JQurey ready')
 })
@@ -139,12 +231,13 @@ $('.run-timeline').on('click', function () {
 // 如果一個動畫是由多個動畫配合而成，則會觸發多個 animationend 事件。為了避免因為這樣造成一次觸發多個 triggerAnimation，所以加上 multipleAnimationend 做為檢測機制的變數。
 let multipleAnimationend = false
 $('body').on('animationend', function () {
+  runTimeline = false
   if (!multipleAnimationend) {
     if (i < items.length - 1) {
       // 避免連續兩個相同的動畫，不會跑
       setTimeout(() => {
         i = triggerAnimation(i, items)
-      }, 1)
+      }, 10)
     } else {
       i = 0
       items = []
@@ -157,5 +250,7 @@ function triggerAnimation(i, items) {
   let className = items[i]
   document.querySelector(`.${className}`).dispatchEvent(event)
   multipleAnimationend = false
+  runTimeline = true
+  pushToArray()
   return i = i + 1
 }

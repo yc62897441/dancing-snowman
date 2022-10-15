@@ -61,6 +61,13 @@
   <br>
   <div>
     <button type="button" class="run-btn run-timeline">run timeline</button>
+    <button type="button" class="run-btn download-gif">download gif</button>
+
+    <button type="button" class="run-btn print-array">print-array</button>
+
+    <button type="button" class="run-btn download-single-image">download-single-image</button>
+
+    <button type="button" class="run-btn array-to-gif">array to gif</button>
   </div>
 
   <br>
@@ -82,7 +89,23 @@
 
   <br>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="main.js"></script>
+
+  <!-- 新增 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+
+  <!-- <script type="text/javascript" src="https://imgss.github.io/demo/gif/gif.js"></script> -->
+  <!-- <script type="text/javascript" src="https://imgss.github.io/demo/gif/gif.worker.js"></script> -->
+  <script src="/dist/gif.js"></script>
+  <script src="/dist/gif.js"></script>
+  <script src="./dist/gif.worker.js"></script>
+  <script src="/dist/js/gif.worker.js"></script>
+  <!-- 新增 -->
+
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>
